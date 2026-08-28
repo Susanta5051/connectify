@@ -1,7 +1,6 @@
-import { Request, Response } from "express";
+import type{ Request, Response } from "express";
 import User from "../models/User.model.ts";
 import Message from "../models/Message.model.ts";
-import { Mongoose, ObjectId } from "mongoose";
 // import {cloudinary }from "../middlewares/Cloudinary.ts";
 import {io , userSocketMap} from '../lib/socket.ts'
 import uploadImage from '../middlewares/ImageUpload.ts'

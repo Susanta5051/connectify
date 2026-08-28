@@ -1,14 +1,12 @@
-import { Request, Response } from "express";
+import type { Request, Response } from "express";
 import User, { IUser } from "../models/User.model.ts";
 import bcrypt from "bcryptjs";
 import { generateToken} from "../lib/createToken.ts";
 // import {cloudinary }from "../middlewares/Cloudinary.ts";
 import Message from "../models/Message.model.ts";
 import mongoose from "mongoose";
-import { IMessage } from "../models/Message.model.ts";
+import type { IMessage } from "../models/Message.model.ts";
 import UploadImage from '../middlewares/ImageUpload.ts'
-import { updateMessage } from "./Message.controller.ts";
-import { JwtPayload } from "jsonwebtoken";
 import UserValidator from "../validators/register.validator.ts";
 import UpdateValidator from "../validators/update.validator.ts";
 
