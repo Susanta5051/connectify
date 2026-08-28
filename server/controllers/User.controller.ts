@@ -1,5 +1,5 @@
 import type { Request, Response } from "express";
-import User, { IUser } from "../models/User.model.ts";
+import User from "../models/User.model.ts";
 import bcrypt from "bcryptjs";
 import { generateToken} from "../lib/createToken.ts";
 // import {cloudinary }from "../middlewares/Cloudinary.ts";
