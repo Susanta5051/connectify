@@ -1,9 +1,8 @@
-import { createSlice , createAsyncThunk, isRejectedWithValue } from "@reduxjs/toolkit";
+import { createSlice , createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
-import { backendUrl } from "@/contexts/UserContext";
+import { backendUrl } from "../App.tsx";
 import type { IContacts, IOtherUser, IUser } from "@/types/UserType";
 import {toast} from 'react-toastify'
-import  type {IUpdateData} from '../pages/UpdateProfile'
 import type { RegisterType } from "@/pages/RegisterPage";
 import type { LoginType } from "@/pages/LoginPage";
 axios.defaults.withCredentials= true;

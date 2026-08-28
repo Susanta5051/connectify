@@ -1,7 +1,6 @@
-import  {  useContext, useEffect, useState } from "react";
+import  {   useEffect, useState } from "react";
 // import {userDummyData} from '../assets/assets.js'
 import Avatar from '../assets/avatar_icon.png'
-import { UserContext } from "@/contexts/UserContext.js";
 import type { IOtherUser, IUser } from "@/types/UserType.js";
 import { useSelector } from "react-redux";
 import type { RootState } from "@/redux/store";

@@ -5,10 +5,9 @@ import Contacts from "../components/Contacts";
 import ChatHistory from "../components/ChatHistory";
 import type {AppDispatch, RootState} from '../redux/store.ts'
 import {useDispatch, useSelector} from 'react-redux'
-import { checkAuth, updateOnlineUsers } from "@/redux/userSlice.ts";
+import{ updateOnlineUsers } from "@/redux/userSlice.ts";
 import { socket } from "@/contexts/socket.ts";
-import { updateContacts } from "@/redux/userSlice.ts";
-import type { IMessages } from "@/types/UserType.ts";
+
 
 
 

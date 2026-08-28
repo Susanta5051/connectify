@@ -5,7 +5,7 @@ import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
 import TextareaAutosize from "@mui/material/TextareaAutosize";
 import PermMediaIcon from '@mui/icons-material/PermMedia';
 import ClearIcon from '@mui/icons-material/Clear';
-import { backendUrl } from "@/contexts/UserContext.tsx";
+import { backendUrl } from "../App.tsx";
 import axios from "axios";
 import { toast } from "react-toastify";
 // import {useSocket} from "../contexts/useSocket.ts"

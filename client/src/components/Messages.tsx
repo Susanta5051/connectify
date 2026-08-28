@@ -1,7 +1,7 @@
 import { useRef, useEffect, useState } from "react";
 import ShadcnMessage from "./ShadcnMessage";
 import axios from "axios";
-import { backendUrl } from "../contexts/UserContext.tsx";
+import { backendUrl } from "../App.tsx";
 import logo_icon from "../assets/logo_icon.png";
 import type { IMessages } from "@/types/UserType.ts";
 import { useDispatch, useSelector } from "react-redux";

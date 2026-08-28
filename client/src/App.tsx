@@ -15,6 +15,9 @@ import { useDispatch, useSelector } from "react-redux";
 import {type AppDispatch, type RootState } from "./redux/store.ts";
 import { checkAuth } from "./redux/userSlice.ts";
 
+export const backendUrl = (import.meta.env.VITE_BACKEND_URL || "http://localhost:3000")+"/api"
+
+console.log(import.meta.env.VITE_BACKEND_URL)
 
 function App() {
       
