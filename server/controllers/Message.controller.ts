@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
-import User from "../models/User.model";
-import Message from "../models/Message.model";
+import User from "../models/User.model.ts";
+import Message from "../models/Message.model.ts";
 import { Mongoose, ObjectId } from "mongoose";
 // import {cloudinary }from "../middlewares/Cloudinary.ts";
 import {io , userSocketMap} from '../lib/socket.ts'

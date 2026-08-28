@@ -1,5 +1,5 @@
 import * as z from 'zod'
-import { userSocketMap } from '../lib/socket';
+import { userSocketMap } from '../lib/socket.ts';
 
  const UserValidator = z.object({
     fullName: z.string().min(3),
