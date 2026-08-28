@@ -2,8 +2,8 @@ import type { Request, Response, NextFunction } from "express";
 import jwt from "jsonwebtoken";
 import User from "../models/User.model.ts";
 
-import { IUser } from "../models/User.model.ts";
-import mongoose, { Mongoose } from "mongoose";
+import {type IUser } from "../models/User.model.ts";
+import mongoose from "mongoose";
 
 interface UUser extends IUser{
   _id: mongoose.Types.ObjectId;
