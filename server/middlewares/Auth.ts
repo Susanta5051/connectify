@@ -25,6 +25,7 @@ export const Authenticate = async (
   next: NextFunction
 ) => {
   try {
+    // console.log(req.path)
       const token = req.cookies.token;
     if (!token || Array.isArray(token))
       return res.status(401).json({ success: false, message: "" });

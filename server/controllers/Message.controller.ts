@@ -79,17 +79,17 @@ export const createMessage = async (req: Request, res: Response) => {
       seen: false,
       createdAt: Date.now(),
     });
-    console.log("message" , message)
+    // console.log("message" , message)
 
     const receiverSocketId = userSocketMap[receiver._id.toString()];
     if(receiverSocketId){
-      console.log("recieiver" , message)
+      // console.log("recieiver" , message)
       io.to(receiverSocketId).emit("newMessage", message)
     }
 
     const senderSocketId = userSocketMap[id.toString()];
     if (senderSocketId) {
-      console.log("sender" , message)
+      // console.log("sender" , message)
       io.to(senderSocketId).emit("newMessage", message); 
     }
     
@@ -165,8 +165,10 @@ export const deleteMessage = async (req: Request, res: Response) => {
 export const setSeenTrue = async (req : Request , res:Response)=>{
   try{
     const user = req.user;
+    console.log("fsvs")
     const id = req.params.id;
     const message = await Message.findById(id);
+    console.log("message found" , message)
     if(!message ){
       return res.status(404).json({success:"false" , message:"Message not found"})
     }

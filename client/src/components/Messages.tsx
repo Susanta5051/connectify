@@ -64,13 +64,14 @@ const Messages = () => {
   const sendSeenTrue = async (messages:IMessages)=>{
     try{
         const response = await axios.patch(
-          `${backendUrl}/messages/set-seen-true/${messages._id}`,
+          `${backendUrl}/message/set-seen-true/${messages._id}`,
           {
             headers: {
               "Content-Type": "application/json",
             },
           }
         );
+        console.log(response.data.message)
     }catch(error){
       console.log(error);
     }
@@ -114,6 +115,7 @@ const Messages = () => {
       };
 
       const handleUserTyping = (data: { senderId: string; isTyping: boolean }) => {
+        // console.log("sender  ",data , selectedContact)
         if (selectedContact._id.toString() === data.senderId) {
           setTyping(data.isTyping);
         }

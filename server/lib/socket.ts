@@ -19,7 +19,7 @@ export const InitializeSocket = (server : http.Server)=>{
 
     io.on("connection" , (socket)=>{
         const userId:any = socket.handshake.query.userId;
-        console.log("User Connected", userId)
+        // console.log("User Connected", userId)
     
         if(userId) userSocketMap[userId] = socket.id;
     
@@ -49,7 +49,6 @@ export const InitializeSocket = (server : http.Server)=>{
 
         socket.on("typing", (data: { receiverId: string; isTyping: boolean }) => {
             const receiverSocketId = userSocketMap[data.receiverId];
-            console.log(data)
             if (receiverSocketId) {
                 io.to(receiverSocketId).emit("userTyping", {
                     senderId: socket.handshake.query.userId,
