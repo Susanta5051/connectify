@@ -114,7 +114,7 @@ const Messages = () => {
       };
 
       const handleUserTyping = (data: { senderId: string; isTyping: boolean }) => {
-        if (selectedContact._id.toString() === data.senderId.toString()) {
+        if (selectedContact._id.toString() === data.senderId) {
           setTyping(data.isTyping);
         }
       };
