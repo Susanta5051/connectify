@@ -1,9 +1,13 @@
 // import React from 'react'
+import { lazy,Suspense } from "react";
 // import ChatContainer from './ChatContainer'
 import ChatInput from "./ChatInput";
 // import ShadcnMessage from './ShadcnMessage'
-import Messages from "./Messages";
+// import Messages from "./Messages";
 import ChatHeader from "./ChatHeader";
+import { Loader } from "lucide-react";
+
+const Messages = lazy(()=> import('./Messages.tsx'))
 
 const ChatHistory = () => {
   return (
@@ -13,7 +17,9 @@ const ChatHistory = () => {
       </div>
 
       <div className="flex-1 flex overflow-y-auto">
-        <Messages />
+        <Suspense fallback={<div className="w-full flex justify-center h-full items-center"><Loader className="size-20 spin" /></div>} >
+          <Messages />
+        </Suspense>
       </div>
 
       <ChatInput />

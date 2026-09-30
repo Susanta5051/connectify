@@ -44,7 +44,7 @@ function App() {
   },[])
   
   return (
-    <div className="bg-[url('/src/assets/bg.avif')] bg-cover bg-center backdrop-blur-2xl h-screen *:text-white *:text-[0.5rem] *:md:text-lg  overflow-y-hidden">
+    <div className=" bg-linear-to-br from-cyan-950 to-fuchsia-950 backdrop-blur-2xl h-screen *:text-white *:text-[0.5rem] *:md:text-lg  overflow-y-hidden">
       <Routes>
         <Route path="/" element={<Navigate to="/home" replace />} />
         <Route element={<ProtectedRoute />}>

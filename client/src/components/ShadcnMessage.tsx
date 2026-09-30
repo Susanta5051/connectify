@@ -62,9 +62,9 @@ const ShadcnMessage = ({message}: { message:any }) => {
  
   return (
     <div className={`flex w-full h-auto ${position === "start" ? "justify-start" : "justify-end"}  px-5 py-2 ${unseen ? "bg-muted/30" : ""} `}>
-      <Message align={position}>
+      <Message align={position} >
         <MessageContent>
-          {message.content.image && <Attachment orientation="vertical">
+          {message.content.image && <Attachment orientation="vertical" className="shadow-[0px_0px_10px_rgba(255,255,255,1)]">
             <AttachmentMedia variant="image">
               <a href={message.content.image}>
                 <img
@@ -79,7 +79,7 @@ const ShadcnMessage = ({message}: { message:any }) => {
 
           {message.content.file &&
           
-          <Attachment>
+          <Attachment className="shadow-[0px_0px_10px_rgba(255,255,255,1)]">
             
             <AttachmentMedia>
               <FileTextIcon />
@@ -105,7 +105,7 @@ const ShadcnMessage = ({message}: { message:any }) => {
           }
           
           {message.content.text && <Bubble className="">
-            <BubbleContent className="">
+            <BubbleContent className="shadow-[2px_2px_5px_rgba(53,89,196,1)]">
               {message.content.text}
             </BubbleContent>
           </Bubble>}
